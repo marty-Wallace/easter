@@ -6,7 +6,7 @@ The following easter algorithm taken from "SPARC Architecture Assembly Language 
 This algorithm is historically significant as it was one of the main applications of arithmitec in the middle ages, used by the Catholic Church to calculate the date of easter each year. 
 
     1. Start by setting the Year Y for the date we want to find easter on
-    Y = 1984
+        Y = 1984
 
     2. Compute the golden number G for the year Y
         G = (Y mod 19) + 1

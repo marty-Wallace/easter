@@ -1,5 +1,33 @@
-# easter
+## easter
 Sparc assembly program to calculate the date of easter for a given year
+
+### to run
+```
+bash$ m4 easter.m4 > easter.s 
+bash$ gcc -g easter.s -o easter
+bash$ gdb easter
+
+(gdb) break input
+Breakpoint 1 at 0x10710
+
+(gdb) break end
+Breakpoint 2 at 0x1080c
+
+(gdb) r
+Starting program: /home/oksun6/student/mwallace/easter
+(no debugging symbols found)...(no debugging symbols found)...(no debugging symbols found)...
+Breakpoint 1, 0x00010710 in input ()
+
+(gdb) set $i0 = 1998
+
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x0001080c in out ()
+
+(gdb) printf "Easter occurs on %d/%d/%d\n", $l6, $l7, $i0
+Easter occurs on 12/4/1998
+```
 
 The following easter algorithm taken from "SPARC Architecture Assembly Language Programming Language, and C" Second Edition By Richard P. Paul. 
 
